@@ -1,17 +1,17 @@
 # PowerSUSE -- a Docker container with openSUSE and PowerShell
 
-1. Build Docker image:
+## Build Docker image:
 
     docker build -t powersuse .
     
-2. Run Container
+Run Container
 
     docker run -it --rm powersuse pwsh
     
 Or pull it:
 
-docker pull datenteiler/powersuse
-docker run --name=powersuse -it datenteiler/powersuse pwsh
+    docker pull datenteiler/powersuse
+    docker run --name=powersuse -it datenteiler/powersuse pwsh
 
 ## Docker und VS Code:
 
