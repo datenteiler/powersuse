@@ -2,12 +2,13 @@ FROM opensuse
 MAINTAINER "Christian Imhorst <christian.imhorst@gmail.com>"
 ADD https://packages.microsoft.com/keys/microsoft.asc /tmp/microsoft.asc
 ADD https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/powershell-6.0.1-1.rhel.7.x86_64.rpm /tmp/powershell.rpm
-RUN zypper --non-interactive in libunwind libicu libcurl4 screenfetch sudo which vim bind-utils net-tools && \ 
+RUN zypper --non-interactive in libunwind libicu libcurl4 screenfetch sudo which vim bind-utils net-tools kmod && \ 
  zypper clean -a && \
  zypper ar https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod dotnet && \
  zypper --no-gpg-check ref && \
  rpm --import /tmp/microsoft.asc && \
  rpm -ivh --nodeps /tmp/powershell.rpm && \
+ rm -rf /tmp/powershell.rpm && \
  export uid=1000 gid=1000 && \
  mkdir -p /home/suse && \
  echo "suse:x:${uid}:${gid}:suse,,,:/home/suse:/bin/bash" >> /etc/passwd && \
