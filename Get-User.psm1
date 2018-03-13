@@ -16,6 +16,9 @@
 
     .EXAMPLE
     PS /> Get-User | Where-Object {$_.Name -match "root"}
+    
+    .EXAMPLE
+    PS /> Get-User | ft
 #>
 
 function Get-User ($Username = $null) 
