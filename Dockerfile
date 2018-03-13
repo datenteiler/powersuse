@@ -19,8 +19,5 @@ RUN zypper --non-interactive up && \
     chown ${uid}:${gid} -R /home/suse && \
     export PATH=$PATH:$HOME/dotnet
 USER suse
-ADD --chown=suse:suse https://raw.githubusercontent.com/datenteiler/powersuse/master/Get-User.psm1 /home/suse/Get-User.psm1
-ADD --chown=suse:suse https://raw.githubusercontent.com/datenteiler/powersuse/master/Show-Modules.psm1 /home/suse/Show-Modules.psm1
-ADD --chown=suse:suse https://raw.githubusercontent.com/datenteiler/powersuse/master/Get-FreeDiskSpace.psm1 /home/suse/Get-FreeDiskSpace.psm1
 ENV HOME /home/suse
 ENV TERM xterm
