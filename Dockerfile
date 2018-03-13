@@ -1,5 +1,5 @@
 FROM opensuse
-MAINTAINER "Christian Imhorst <christian.imhorst@gmail.com>"
+LABEL maintainer "Christian Imhorst <christian.imhorst@gmail.com>"
 ADD https://packages.microsoft.com/keys/microsoft.asc /tmp/microsoft.asc
 ADD https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/powershell-6.0.1-1.rhel.7.x86_64.rpm /tmp/powershell.rpm
 RUN zypper --non-interactive up && \
