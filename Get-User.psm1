@@ -6,13 +6,16 @@
     Get-User shows all the user in /etc/passwd 
 
    .EXAMPLE
-    C:\PS> Import-Module ./Get-User.ps1
+    PS /> Import-Module ./Get-User.ps1
 
    .EXAMPLE
-    C:\PS> Get-User   
+    PS /> Get-User   
 
    .EXAMPLE
-    C:\PS> Get-User -Username <username>
+    PS /> Get-User -Username <username>
+
+    .EXAMPLE
+    PS /> Get-User | Where-Object {$_.Name -match "root"}
 #>
 
 function Get-User ($Username = $null) 
@@ -22,7 +25,6 @@ function Get-User ($Username = $null)
         $csvlist | Where-Object {$_.Name -eq $Username}
     }
     else {
-        $csvlist | Sort-Object Name |
-        Format-Table
+        $csvlist | Sort-Object Name
     }
 }
