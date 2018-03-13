@@ -6,7 +6,7 @@
     Get-User shows all the user in /etc/passwd 
 
    .EXAMPLE
-    PS /> Import-Module ./Get-User.ps1
+    PS /> Import-Module ./Get-User.psm1
 
    .EXAMPLE
     PS /> Get-User   
