@@ -21,3 +21,4 @@ RUN zypper --non-interactive up && \
 USER suse
 ENV HOME /home/suse
 ENV TERM xterm
+CMD /usr/bin/pwsh
