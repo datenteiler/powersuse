@@ -1,7 +1,7 @@
 FROM opensuse
 LABEL maintainer "Christian Imhorst <christian.imhorst@gmail.com>"
 ADD https://packages.microsoft.com/keys/microsoft.asc /tmp/microsoft.asc
-ADD https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/powershell-6.0.1-1.rhel.7.x86_64.rpm /tmp/powershell.rpm
+ADD https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/powershell-6.0.2-1.rhel.7.x86_64.rpm /tmp/powershell.rpm
 ADD https://raw.githubusercontent.com/datenteiler/powersuse/master/Get-FreeDiskSpace.psm1 /tmp/Get-FreeDiskSpace.psm1
 ADD https://raw.githubusercontent.com/datenteiler/powersuse/master/Get-User.psm1 /tmp/Get-User.psm1
 ADD https://raw.githubusercontent.com/datenteiler/powersuse/master/Show-Modules.psm1 /tmp/Show-Modules.psm1
